@@ -95,7 +95,8 @@ in {
       sidebar-mode = true;
       kb-cancel = "Super+space,Escape";
     };
-    theme = "Arc-Dark";
+    # theme = "Arc-Dark";
+    theme = ./rofi/theme.rasi;
   };
 
   programs.kitty = {
