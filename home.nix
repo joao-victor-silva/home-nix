@@ -49,6 +49,7 @@ in {
 
     # wm
     # pkgs.qtile
+    # pkgs.dunst
 
     # Fonts
     pkgs.inter
