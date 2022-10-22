@@ -50,7 +50,6 @@ in {
 
     # wm
     # pkgs.qtile
-    # pkgs.dunst
 
     # Fonts
     pkgs.inter
@@ -205,5 +204,9 @@ in {
     ignores = [
       ".direnv"
     ];
+  };
+
+  services.dunst = {
+    enable = true;
   };
 }
