@@ -42,6 +42,7 @@ in {
     pkgs.lazygit
     pkgs.exa
     pkgs.bat
+    pkgs.xclip
 
     pkgs.nix-prefetch-github
 
@@ -68,6 +69,9 @@ in {
 
   # powerlevel10k config
   home.file.".p10k.zsh".source = ./zsh/.p10k.zsh;
+
+  # tmux config
+  home.file.".tmux.conf".source = ./tmux/tmux.conf;
 
   # neovim config
   home.file.".config/nvim".source = pkgs.fetchFromGitHub {
