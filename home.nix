@@ -43,6 +43,8 @@ in {
     pkgs.exa
     pkgs.bat
 
+    pkgs.nix-prefetch-github
+
     pkgs.gh
 
     # wm
@@ -62,6 +64,17 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
+
+  # powerlevel10k config
+  home.file.".p10k.zsh".source = ./zsh/.p10k.zsh;
+
+  # neovim config
+  home.file.".config/nvim".source = pkgs.fetchFromGitHub {
+     owner = "joao-victor-silva";
+     repo = "dotfiles";
+     rev = "7975fa0";
+     hash = "sha256-ZVQbOrPcc8oBE4AitoqwClf4wlCe8DwyUYBghZ839ig=";
+  };
 
   # https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
   programs.rofi = {
