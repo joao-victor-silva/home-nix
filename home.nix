@@ -54,6 +54,9 @@ in {
     # Fonts
     pkgs.inter
     (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
+
+    # Flatpak support
+    pkgs.flatpak
   ];
 
   # This value determines the Home Manager release that your
