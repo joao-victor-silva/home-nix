@@ -79,7 +79,7 @@ in {
      owner = "joao-victor-silva";
      repo = "dotfiles";
      rev = "7975fa0";
-     hash = "sha256-ZVQbOrPcc8oBE4AitoqwClf4wlCe8DwyUYBghZ839ig=";
+     hash = "sha256-Z3Indyj5O8VUuWEILC8Gqq+51fm+syLxUzyCbohHxX0=";
   };
 
   # https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
