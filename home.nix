@@ -44,6 +44,7 @@ in {
     pkgs.exa
     pkgs.bat
     pkgs.xclip
+    pkgs.starship
 
     pkgs.nix-prefetch-github
 
@@ -69,9 +70,6 @@ in {
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "22.05";
-
-  # powerlevel10k config
-  home.file.".p10k.zsh".source = ./zsh/.p10k.zsh;
 
   # tmux config
   home.file.".tmux.conf".source = ./tmux/tmux.conf;
@@ -144,10 +142,9 @@ in {
       if [[ -r "${config.home.homeDirectory}/.nix-profile/etc/profile.d/nix.sh" ]]; then
         source "${config.home.homeDirectory}/.nix-profile/etc/profile.d/nix.sh"
       fi
-      # load p10k config
-      if [[ -r "${config.home.homeDirectory}/.p10k.zsh" ]]; then
-        source "${config.home.homeDirectory}/.p10k.zsh"
-      fi
+
+      # starship
+      eval "$(starship init zsh)"
     '';
 
     plugins = [
@@ -155,17 +152,6 @@ in {
         name = "key_bindings_fix";
         file = "key_bindings_fix.zsh";
 	src = ./zsh;
-      }
-
-      {
-        name = "powerlevel10k";
-        file = "powerlevel10k.zsh-theme";
-        src = pkgs.fetchFromGitHub {
-          owner = "romkatv";
-          repo = "powerlevel10k";
-          rev = "v1.16.1";
-          hash = "sha256-DLiKH12oqaaVChRqY0Q5oxVjziZdW/PfnRW1fCSCbjo=";
-        };
       }
 
       {
@@ -190,6 +176,7 @@ in {
         };
       }
     ];
+
     shellAliases = {
       ls = "exa";
       cat = "bat";
