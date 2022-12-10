@@ -194,6 +194,7 @@ in {
     };
     ignores = [
       ".direnv"
+      ".envrc"
     ];
   };
 
