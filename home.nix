@@ -34,6 +34,7 @@ in {
     # libs
     pkgs.glibc
     pkgs.libcxx
+    pkgs.gcc
 
     # pkgs is the set of all packages in the default home.nix implementation
     pkgs.cmake
