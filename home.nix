@@ -79,8 +79,8 @@ in {
   home.file.".config/nvim".source = pkgs.fetchFromGitHub {
      owner = "joao-victor-silva";
      repo = "dotfiles";
-     rev = "ece4093";
-     hash = "sha256-Z3Indyj5O8VUuWEILC8Gqq+51fm+syLxUzyCbohHxX0=";
+     rev = "85c0a37";
+     hash = "sha256-f/GHLjc734YdfVYLaebCXIJk/j3qQTK0IMulRsOujgU=";
   };
 
   # https://unix.stackexchange.com/questions/364773/how-to-get-installed-application-to-be-detected-by-rofi
