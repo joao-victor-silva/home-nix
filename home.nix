@@ -79,7 +79,7 @@ in {
   home.file.".config/nvim".source = pkgs.fetchFromGitHub {
      owner = "joao-victor-silva";
      repo = "dotfiles";
-     rev = "7975fa0";
+     rev = "ece4093";
      hash = "sha256-Z3Indyj5O8VUuWEILC8Gqq+51fm+syLxUzyCbohHxX0=";
   };
 
